@@ -1,0 +1,93 @@
+public class Hausaufgabe2
+{
+
+		
+		public static void main(String[] args)
+		{ 
+		
+		int Einnahmen =Einnahmen(); 
+		int Ausgaben =Ausgaben(); 
+		
+		int a,b,Ausgabengesamt,Einnahmengesamt ; 
+		int Wahl; 
+		Ausgaben=0; 
+		Ausgabengesamt=0;
+		Einnahmen=0; 
+		Einnahmengesamt=0; 
+		System.out.println("Möchten Sie Ausgaben oder Einnahmen eingeben? Für Ausgaben schreiben Sie 1, für Einnahmen schreiben Sie 2 \n 1");
+		Wahl=1;  
+		Berechnen(Einnahmengesamt, Ausgabengesamt); 
+		}
+		public static int Ausgaben() {
+			int a,b,Ausgaben,Ausgabengesamt = 0,Einnahmen,Einnahmengesamt,Differenz = 0, Wahl = 1;  
+			if( Wahl==1 ) 
+			{
+			System.out.println("Geben Sie die Anzahl Ihrer Ausgaben an die Sie berechnet haben möchten:1"); 
+			a=1; 
+				while (a>0 ) 
+				{
+				System.out.println("Bitte geben Sie Ihre Ausgaben ein:"); 
+				Ausgaben=4;
+				a--;
+			
+					if(Ausgaben>0 ) 
+					{
+						Ausgabengesamt= Ausgabengesamt+Ausgaben; 
+			 
+
+					}
+						if (a==0)
+						{
+					System.out.println("Ihre Ausgaben betragen: "+ Ausgabengesamt+"€");
+					
+						}
+				}
+				System.out.println("Möchten Sie nun Ihre Einnahmen erfassen? Für Ja 2 für Nein 0 \n 2");
+				Wahl=2;
+		} 	return Ausgabengesamt;
+		}
+			public static int Einnahmen() {
+				int a,b,Ausgaben,Ausgabengesamt,Einnahmen,Einnahmengesamt = 0,Differenz = 0,Wahl = 2 ; 
+				if (Wahl==2) 
+				{
+					System.out.println("Geben Sie die Anzahl Ihrer Einnahmen an die Sie berechnet haben möchten:1"); 
+					b=1;
+					while (b>0 ) 
+					{
+						System.out.println("Bitte geben Sie Ihre Einnahmen ein:4"); 
+						Einnahmen=4;
+						b--;
+					
+						if(Einnahmen>0 ) 
+						{
+							Einnahmengesamt= Einnahmengesamt+Einnahmen; 
+							 
+			
+						}
+							if (b==0)
+							{
+								System.out.println("Ihre Einnahmen betragen: "+ Einnahmengesamt +"€");
+								
+							}
+						
+					}
+					System.out.println("Möchten Sie nun Ihre Ausgaben erfassen? Für Ja 1 für Nein 0\n 0" );
+					
+				}
+				return Einnahmengesamt; 
+			}
+						
+			public static int Berechnen(int Einnahmengesamt, int Ausgabengesamt) 
+			{
+			
+			int Differenz = 0, Wahl = 0; 
+			if (Wahl==0) {
+				Differenz=Einnahmengesamt-Ausgabengesamt; 
+				System.out.println("Vielen Dank für die Nutzung des Angelinarechners.\n"
+								+"Dies ergibt eine Differenz zwischen Einnahmen und Ausgaben von:"+Differenz+"€:\n");
+				
+			}
+			return Differenz; 
+			
+		}
+	}
