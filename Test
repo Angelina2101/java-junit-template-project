@@ -1,0 +1,31 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Hausaufgabe2Test {
+
+	@Test
+	void test() {
+		Hausaufgabe2 test= new Hausaufgabe2(); 
+		int Einnahmengesamt=120, Ausgabengesamt=80;
+		int Differenz= test.Berechnen(Einnahmengesamt, Ausgabengesamt); 
+		assertEquals(40,Differenz); 
+		
+	}
+	@Test
+	void test2() {
+		Hausaufgabe2 test= new Hausaufgabe2(); 
+		int Einnahmengesamt=90, Ausgabengesamt=100;
+		int Differenz= test.Berechnen(Einnahmengesamt, Ausgabengesamt); 
+		assertEquals(-10,Differenz); 
+	}
+
+		@Test
+		void test3() {
+			Hausaufgabe2 test= new Hausaufgabe2(); 
+			int Einnahmengesamt=90, Ausgabengesamt=90;
+			int Differenz= test.Berechnen(Einnahmengesamt, Ausgabengesamt); 
+			assertEquals(0,Differenz); 
+		}
+			
+}
