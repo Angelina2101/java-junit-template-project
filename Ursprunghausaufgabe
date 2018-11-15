@@ -1,0 +1,89 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Hausaufgaben 
+{
+
+		
+		public static void main(String[] args) 
+		
+		
+		{	
+			
+
+		Scanner in = new Scanner(System.in).useLocale(Locale.ENGLISH);
+		int a,b,Ausgaben,Ausgabengesamt,Einnahmen,Einnahmengesamt,Differenz ; 
+		String A, E;
+		int Wahl; 
+		Ausgaben=0; 
+		Ausgabengesamt=0;
+		Einnahmen=0; 
+		Einnahmengesamt=0; 
+		System.out.println("Möchten Sie Ausgaben oder Einnahmen eingeben? Für Ausgaben schreiben Sie 1, für Einnahmen schreiben Sie 2");
+		Wahl=in.nextInt(); 
+			if( Wahl==1 ) 
+			{
+			System.out.println("Geben Sie die Anzahl Ihrer Ausgaben an die Sie berechnet haben möchten"); 
+			a=in.nextInt(); 
+				while (a>0 ) 
+				{
+				System.out.println("Bitte geben Sie Ihre Ausgaben ein:"); 
+				Ausgaben=in.nextInt();
+				a--;
+			
+					if(Ausgaben>0 ) 
+					{
+						Ausgabengesamt= Ausgabengesamt+Ausgaben; 
+			 
+
+					}
+						if (a==0)
+						{
+					System.out.println("Ihre Ausgaben betragen: "+ Ausgabengesamt+"€");
+					
+						}
+				}
+				System.out.println("Möchten Sie nun Ihre Einnahmen erfassen? Für Ja 2 für Nein 0 ");
+				Wahl=in.nextInt();
+						
+			}
+		if (Wahl==2) 
+		{
+			System.out.println("Geben Sie die Anzahl Ihrer Einnahmen an die Sie berechnet haben möchten"); 
+			b=in.nextInt(); 
+			while (b>0 ) 
+			{
+				System.out.println("Bitte geben Sie Ihre Einnahmen ein:"); 
+				Einnahmen=in.nextInt();
+				b--;
+			
+				if(Einnahmen>0 ) 
+				{
+					Einnahmengesamt= Einnahmengesamt+Einnahmen; 
+					 
+	
+				}
+					if (b==0)
+					{
+						System.out.println("Ihre Einnahmen betragen: "+ Einnahmengesamt +"€");
+						
+					}
+				
+			}
+			System.out.println("Möchten Sie nun Ihre Ausgaben erfassen? Für Ja 1 für Nein 0" );
+			Wahl=in.nextInt();
+		}
+		if (Wahl==0) {
+			Differenz=Einnahmengesamt-Ausgabengesamt; 
+			System.out.println("Vielen Dank für die Nutzung des Angelinarechners.\n"
+					+ " Ihre Ausgaben betragen:"+Ausgabengesamt+"€,\n"
+							+ " Ihre Einnahmen betragen:"+Einnahmengesamt+"€.\n"
+							+"Dies ergibt eine Differenz zwischen Einnahmen und Ausgaben von:"+Differenz+"€:\n");
+			
+		}
+	}
+}
+
+		
+
+
